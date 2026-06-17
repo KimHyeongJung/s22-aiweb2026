@@ -120,7 +120,7 @@ a:hover { text-decoration: underline; }
 
 /* ============ 데모 카드 ============ */
 .demo-card {
-  margin-top: -2.5rem;
+  margin-top: 2.5rem;
   margin-bottom: var(--space-section);
   background: var(--white);
   border: 1px solid var(--border);
@@ -569,7 +569,7 @@ footer a:hover { text-decoration: underline; }
 
 /* ============ 모바일 ============ */
 @media (max-width: 540px) {
-  .demo-card { margin-top: -1.5rem; border-radius: var(--radius); }
+  .demo-card { margin-top: 1.5rem; border-radius: var(--radius); }
   .cta { padding: 1rem; flex-direction: column; }
   .btn { justify-content: center; width: 100%; }
   .features-grid { grid-template-columns: 1fr; }
