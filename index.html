@@ -3,12 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- ⬇⬇⬇ 본인 정보로 교체 ⬇⬇⬇ -->
-  <title>🚀 [AI 기반 데일리룩 코디 제안] — by &lt;s22&gt;</title>
-  <meta name="description" content="자신의 의류를 수동으로 등록 후 코디를 만들고 AI가 해당 일자에 날씨, 상황, 계절에 맞는 코디를 추천해주는 서비스" />
-  <!-- ⬆⬆⬆ 본인 정보로 교체 ⬆⬆⬆ -->
+  <title>AI Closet — AI 기반 데일리룩 코디 제안 · s22</title>
+  <meta name="description" content="자신의 의류를 사진으로 등록 후 AI가 코디를 만들고 날씨, 상황, 계절에 맞는 코디를 추천해주는 서비스" />
   <link rel="stylesheet" href="style.css" />
-  <!-- 11주차 — contents.md inline 렌더용 -->
   <script type="module" src="https://cdn.jsdelivr.net/npm/zero-md@3?register"></script>
 </head>
 <body>
@@ -16,10 +13,10 @@
   <!-- ============ HERO ============ -->
   <header class="hero">
     <div class="container">
-      <!-- ⬇⬇⬇ 본인 프로젝트로 교체 (예: "🚀 칼로리카운터") ⬇⬇⬇ -->
-      <h1>🚀 [AI 기반 데일리룩 코디 제안]</h1>
-      <p class="tagline">사용자 코맨트에 맞게 AI가 코디 추천을 1개 이상 추천</p>
-      <!-- ⬆⬆⬆ 본인 프로젝트로 교체 ⬆⬆⬆ -->
+      <div class="hero-badge">🎓 2026 AI 웹융합 · 기말 프로젝트</div>
+      <div class="hero-icon">👗</div>
+      <h1>AI Closet</h1>
+      <p class="tagline">AI가 날씨·상황·계절에 맞는 데일리룩을 추천해 드립니다</p>
     </div>
   </header>
 
@@ -27,77 +24,159 @@
 
     <!-- ============ 데모 카드 ============ -->
     <section class="demo-card">
-      <!-- ⬇⬇⬇ screenshot.png 를 본인 프로젝트 화면 캡쳐로 교체 ⬇⬇⬇ -->
-      <img class="screenshot" src="ai_coordinator_demo.png" alt="[본인 프로젝트] 데모 화면" />
-      <!-- ⬆⬆⬆ screenshot.png 를 본인 프로젝트 화면 캡쳐로 교체 ⬆⬆⬆ -->
-
+      <img class="screenshot" src="ai_coordinator_demo.png" alt="AI Closet 데모 화면" />
       <div class="cta">
-        <!-- ⬇⬇⬇ 다음 주(10주차) 데모 띄운 후 href="#" 를 진짜 도메인으로 ⬇⬇⬇ -->
-        <!-- <a class="btn btn-primary" href="https://example-demo.aiweb2026.site">
-          ▶ Live Demo
-        </a> -->
         <a class="btn btn-primary" href="https://afriday-ai-coordinator.hf.space" target="_blank" rel="noopener">
           ▶ <span class="badge">Live Demo</span>
         </a>
-        <!-- ⬆⬆⬆ 다음 주에 href="https://&lt;본인 ID&gt;-demo.aiweb2026.site" 로 변경 ⬆⬆⬆ -->
-
-        <!-- ⬇⬇⬇ 본인 GitHub 리포 URL 로 교체 ⬇⬇⬇ -->
         <a class="btn btn-secondary" href="https://github.com/KimHyeongJung/ai-coordinator" target="_blank" rel="noopener">
           ⌨ Source on GitHub
         </a>
-        <!-- ⬆⬆⬆ 본인 GitHub 리포 URL 로 교체 ⬆⬆⬆ -->
+      </div>
+    </section>
+
+    <!-- ============ 핵심 기능 ============ -->
+    <section class="features-section">
+      <h2>⚡ 핵심 기능</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-card-icon">👕</div>
+          <div class="feature-card-title">스마트 옷장 관리</div>
+          <p class="feature-card-desc">
+            의류 사진을 업로드하면 Florence-2 Vision AI가
+            카테고리·색상·계절을 자동 분류해 저장합니다.
+            조회·수정·삭제 모두 지원.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card-icon">✨</div>
+          <div class="feature-card-title">AI 코디 생성</div>
+          <p class="feature-card-desc">
+            상황(회사·데이트·운동 등)과 계절을 선택하면
+            Qwen2.5가 옷장의 의류를 조합해 맞춤 코디를
+            즉시 생성·저장합니다.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card-icon">🌤️</div>
+          <div class="feature-card-title">데일리룩 AI 추천</div>
+          <p class="feature-card-desc">
+            "내일 회사에 입고 갈 옷 골라줘" 처럼 채팅하면
+            Open-Meteo 날씨 데이터 + 저장된 코디를 바탕으로
+            AI가 최적 코디를 추천합니다.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ AI 처리 흐름 ============ -->
+    <section class="flow-section">
+      <h2>🔄 AI 처리 흐름</h2>
+      <div class="flow-box">
+        <div class="flow-step">
+          <div class="flow-step-icon">💬</div>
+          <div class="flow-step-label">입력</div>
+          <div class="flow-step-text">"내일 날씨 보고<br>회사 코디 추천해줘"</div>
+        </div>
+        <div class="flow-arrow">›</div>
+        <div class="flow-step">
+          <div class="flow-step-icon">🌦️</div>
+          <div class="flow-step-label">날씨 수집</div>
+          <div class="flow-step-text">Open-Meteo API<br>실시간 기상 정보</div>
+        </div>
+        <div class="flow-arrow">›</div>
+        <div class="flow-step">
+          <div class="flow-step-icon">🤖</div>
+          <div class="flow-step-label">AI 추론</div>
+          <div class="flow-step-text">Qwen2.5-7B<br>코디 조합 분석</div>
+        </div>
+        <div class="flow-arrow">›</div>
+        <div class="flow-step">
+          <div class="flow-step-icon">👔</div>
+          <div class="flow-step-label">출력</div>
+          <div class="flow-step-text">코디 추천 목록<br>착용 의류 상세</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 기술 스택 ============ -->
+    <section class="stack-section">
+      <h2>🛠 기술 스택</h2>
+      <div class="stack-chips">
+        <span class="stack-chip">
+          <span class="stack-chip-dot chip-ai"></span>
+          Qwen2.5-7B-Instruct
+        </span>
+        <span class="stack-chip">
+          <span class="stack-chip-dot chip-ai"></span>
+          Florence-2-base (Vision)
+        </span>
+        <span class="stack-chip">
+          <span class="stack-chip-dot chip-api"></span>
+          Open-Meteo (날씨 API)
+        </span>
+        <span class="stack-chip">
+          <span class="stack-chip-dot chip-db"></span>
+          Supabase (PostgreSQL)
+        </span>
+        <span class="stack-chip">
+          <span class="stack-chip-dot chip-ui"></span>
+          Gradio · HF Spaces
+        </span>
+        <span class="stack-chip">
+          <span class="stack-chip-dot chip-ai"></span>
+          LangChain · Transformers
+        </span>
       </div>
     </section>
 
     <!-- ============ 본문 (contents.md 인라인 렌더) ============ -->
     <section class="content">
-      <!-- ⬇⬇⬇ 같은 폴더의 contents.md 를 수정하면 자동 반영 ⬇⬇⬇ -->
-      <zero-md src="contents.md" no-shadow></zero-md>
-      <!-- ⬆⬆⬆ 같은 폴더의 contents.md 를 수정하면 자동 반영 ⬆⬆⬆ -->
+      <div class="content-header">📋 프로젝트 요약 (contents.md)</div>
+      <div class="content-inner">
+        <zero-md src="contents.md" no-shadow></zero-md>
+      </div>
     </section>
 
-    <!-- ============ Giscus 댓글 (8장에서 추가) ============ -->
+    <!-- ============ Giscus 댓글 ============ -->
     <section id="comments" class="comments">
       <h2>💬 이 프로젝트 어떠세요?</h2>
       <p class="comments-note">
         GitHub 계정으로 로그인하면 댓글이 본인 리포의 GitHub Discussions에 자동 저장됩니다.
       </p>
-
-      <!--
-        ⬇⬇⬇ 9주차 SECTION 8 에서 giscus.app 가 자동 생성한 script 코드를 여기에 붙여넣기 ⬇⬇⬇
-        교체할 속성:
-          - data-repo
-          - data-repo-id
-          - data-category-id
-        나머지 속성은 그대로 두세요.
-      -->
       <div class="giscus"></div>
-<script src="https://giscus.app/client.js"
-        data-repo="KimHyeongJung/s22-aiweb2026"
-        data-repo-id="R_kgDOSPzOnA"
-        data-category="Announcements"
-        data-category-id="DIC_kwDOSPzOnM4C79fQ"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="bottom"
-        data-theme="preferred_color_scheme"
-        data-lang="ko"
-        crossorigin="anonymous"
-        async>
-</script>
-      <!-- ⬆⬆⬆ giscus 설정값 교체 ⬆⬆⬆ -->
+      <script src="https://giscus.app/client.js"
+              data-repo="KimHyeongJung/s22-aiweb2026"
+              data-repo-id="R_kgDOSPzOnA"
+              data-category="Announcements"
+              data-category-id="DIC_kwDOSPzOnM4C79fQ"
+              data-mapping="pathname"
+              data-strict="0"
+              data-reactions-enabled="1"
+              data-emit-metadata="0"
+              data-input-position="bottom"
+              data-theme="preferred_color_scheme"
+              data-lang="ko"
+              crossorigin="anonymous"
+              async>
+      </script>
     </section>
+
   </main>
 
   <footer>
     <div class="container">
+      <div class="footer-logo">
+        <span class="footer-logo-icon">👗</span>
+        AI Closet
+      </div>
       <p>
-        2026 AI 웹 융합 · 9주차 데모 소개 페이지 ·
+        2026 AI 웹융합 · 기말 프로젝트 ·
+        Powered by Florence-2 &amp; Qwen2.5 ·
         <a href="https://aiweb2026.site">aiweb2026.site</a>
       </p>
     </div>
   </footer>
+
 </body>
 </html>
